@@ -12,7 +12,7 @@ A modern, responsive portfolio website for showcasing industrial and computation
 - **SEO Friendly**: Semantic HTML and proper meta tags
 - **Fast Loading**: Optimized images and minimal JavaScript
 
-## 📁 Project Structure
+## 📁 Project Structure 
 
 ```
 portfolio/
