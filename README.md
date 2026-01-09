@@ -73,7 +73,13 @@ portfolio/
        <div class="project-image">
            <img src="your-image-url.jpg" alt="Project description">
        </div>
-       <h3 class="project-title">Your Project Name</h3>
+       <div class="project-info">
+           <div class="project-details">
+               <h3 class="project-title">Your Project Name</h3>
+               <p class="project-subtitle">Project Subtitle</p>
+           </div>
+           <span class="project-type">Product Design</span>
+       </div>
    </a>
    ```
 
@@ -85,13 +91,16 @@ Edit the CSS variables in `css/style.css`:
 :root {
     --bg-primary: #FFFFFF;      /* Background color */
     --text-primary: #000000;    /* Text color */
-    --border-color: #000000;    /* Border color */
+    --border-color: #585858;    /* Border color (subtle gray) */
+    --label-color: #585858;     /* Label color for BIO/CONTACT */
     /* ... more variables */
 }
 
 [data-theme="dark"] {
     --bg-primary: #000000;      /* Dark mode background */
     --text-primary: #FFFFFF;    /* Dark mode text */
+    --border-color: #585858;    /* Border color (same in both themes) */
+    --label-color: #585858;     /* Label color (same in both themes) */
     /* ... more variables */
 }
 ```

@@ -95,24 +95,10 @@ if ('IntersectionObserver' in window) {
 }
 
 // ===========================
-// HEADER SCROLL EFFECT (Optional enhancement)
+// HEADER SCROLL EFFECT (Disabled for transparent header)
 // ===========================
 
-let lastScroll = 0;
-const header = document.querySelector('.header');
-
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-
-    // Add shadow to header when scrolled
-    if (currentScroll > 50) {
-        header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-    } else {
-        header.style.boxShadow = 'none';
-    }
-
-    lastScroll = currentScroll;
-});
+// Header remains transparent without any shadow effects
 
 // ===========================
 // MOBILE MENU TOGGLE (For future enhancement)
