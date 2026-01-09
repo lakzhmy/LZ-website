@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nUpdate portfolio design: refined borders, spacing, and project card layout\n\n- Updated border styling: changed to 0.5px thickness with subtle gray \\(#585858\\) for minimal visual separation\n- Added label color variable \\(#585858\\) for BIO and CONTACT sections\n- Enhanced hero section: increased max font size to 160px, adjusted spacing to 60px before bio\n- Removed border between hero and bio sections for cleaner flow\n- Redesigned project cards with modern layout:\n  * Added 8px border-radius to images\n  * Implemented flexbox layout with title/subtitle on left, project type on right\n  * Removed card borders and shadows for minimal aesthetic\n  * Maintained hover zoom effect on images\n- Fixed theme toggle icon visibility in dark mode by using var\\(--text-primary\\)\n- Updated header navigation to use mix-blend-mode: difference with theme-aware colors\n- Updated CLAUDE.md and README.md with current design patterns and color variables\n\n🤖 Generated with [Claude Code]\\(https://claude.com/claude-code\\)\n\nCo-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git push:*)",
+      "Bash(mkdir:*)",
+      "Bash(git commit:*)",
+      "Bash(git push)"
+    ]
+  }
+}

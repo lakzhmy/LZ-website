@@ -3,9 +3,8 @@
    =========================== */
 
 .story-main {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 4rem;
+    margin: 0;
+    padding: 0 40px;
 }
 
 /* ===========================
@@ -213,10 +212,6 @@
    =========================== */
 
 @media (max-width: 1024px) {
-    .story-main {
-        padding: 0 2rem;
-    }
-
     .story-title {
         font-size: 4rem;
     }
@@ -228,7 +223,7 @@
 
 @media (max-width: 768px) {
     .story-main {
-        padding: 0 1.5rem;
+        padding: 0 40px;
     }
 
     .story-title {
