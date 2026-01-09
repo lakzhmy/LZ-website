@@ -15,18 +15,20 @@ A modern, responsive portfolio website for showcasing industrial and computation
 ## 📁 Project Structure 
 
 ```
-portfolio/
+LZ-website/
 ├── index.html              # Home page with project grid
 ├── story.html              # About/Story page
-├── assets/
-│   ├── images/            # Project images and photos
-│   └── fonts/             # Custom fonts (Urbanist)
 ├── css/
 │   ├── style.css          # Main stylesheet with theming
 │   ├── project.css        # Project page specific styles
 │   └── story.css          # Story page specific styles
 ├── js/
 │   └── main.js            # Theme switcher and interactions
+├── images/
+│   ├── nose-pad-system/   # Images for Nose Pad System project
+│   ├── bex-sunglasses/    # Images for Bex Sunglasses project
+│   ├── pet-care-startup/  # Images for Pet Care Startup project
+│   └── led-light-wedges/  # Images for LED Light Wedges project
 └── projects/
     ├── nose-pad-system.html
     ├── bex-sunglasses.html
@@ -61,13 +63,17 @@ portfolio/
    cp projects/nose-pad-system.html projects/your-new-project.html
    ```
 
-2. **Edit the project page**:
+2. **Add project images**:
+   - Create a folder in `images/` for your project (e.g., `images/your-new-project/`)
+   - Add your project images to this folder
+
+3. **Edit the project page**:
    - Update the title, meta description
    - Change project name, role, year, category
    - Update project description and content
-   - Replace placeholder images
+   - Update image paths to point to `../images/your-new-project/your-image.png`
 
-3. **Add to home page** (`index.html`):
+4. **Add to home page** (`index.html`):
    ```html
    <a href="projects/your-new-project.html" class="project-card">
        <div class="project-image">
@@ -176,11 +182,16 @@ To add a Content Management System:
 ## 📝 Best Practices
 
 ### Images
-- Use optimized images (WebP format recommended)
+- Use optimized images (PNG or WebP format recommended)
+- Store images in organized folders: `images/[project-name]/`
+- Images have 8px border-radius and no borders or drop shadows
 - Recommended sizes:
-  - Project cards: 800x600px
-  - Project detail images: 1200x900px
-  - Hero images: 1920x1080px
+  - Project cards: 800x600px (4:3 aspect ratio)
+  - Project detail images: 1200x900px or larger
+- Three layout options available:
+  - Single-column: `<div class="project-images-grid single-col">` (1 column on all screens)
+  - Two-column: `<div class="project-images-grid">` (default, 2 columns desktop)
+  - Three-column: `<div class="project-images-grid three-col">` (3 columns desktop)
 
 ### SEO
 - Update meta descriptions for each page

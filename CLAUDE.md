@@ -50,6 +50,11 @@ LZ-website/
 │   └── story.css          # Story/about page specific styles
 ├── js/
 │   └── main.js            # Theme toggle, smooth scroll, lazy loading, animations
+├── images/
+│   ├── nose-pad-system/   # Images for Nose Pad System project
+│   ├── bex-sunglasses/    # Images for Bex Sunglasses project
+│   ├── pet-care-startup/  # Images for Pet Care Startup project
+│   └── led-light-wedges/  # Images for LED Light Wedges project
 └── projects/
     ├── nose-pad-system.html
     ├── bex-sunglasses.html
@@ -109,9 +114,11 @@ Theme switching is handled in `js/main.js` via:
 - Consistent template structure with back navigation
 - Project header with metadata (role, year, category)
 - Multiple content sections with consistent spacing
-- Image grid layouts with placeholder support
+- Image grid layouts (single-column, 2-column, or 3-column)
+- Images stored in organized folders under `images/[project-name]/`
 - Navigation to next project
 - Uses `project.css` for specific styles
+- Images have 8px border-radius and no borders/shadows
 
 ### JavaScript Architecture
 
@@ -228,8 +235,26 @@ Follow the pattern from `story.html`:
 
 ## Image Guidelines
 
-- **Project cards**: 800x600px (4:3 aspect ratio)
-- **Project detail images**: 1200x900px or larger
-- **Format**: WebP recommended for optimization
+- **Project cards**: 800x600px (4:3 aspect ratio) with 8px border-radius
+- **Project detail images**: 1200x900px or larger with 8px border-radius
+- **Format**: PNG or WebP recommended
 - **Loading**: Images support lazy loading with `data-src` attribute
 - **Alt text**: Always provide descriptive alt text for accessibility
+- **Organization**: Store images in `images/[project-name]/` folders
+- **Styling**: No borders or drop shadows, clean rounded corners only
+
+### Image Layout Options
+
+Project pages support three grid layouts via CSS classes:
+
+1. **Two-column grid** (default): `<div class="project-images-grid">`
+   - 2 columns on desktop, 1 column on mobile
+   - Good for side-by-side comparisons
+
+2. **Three-column grid**: `<div class="project-images-grid three-col">`
+   - 3 columns on desktop, 2 on tablet, 1 on mobile
+   - Ideal for multiple small detail shots
+
+3. **Single-column layout**: `<div class="project-images-grid single-col">`
+   - 1 column on all screen sizes
+   - Best for full-width showcase images

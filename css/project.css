@@ -3,9 +3,8 @@
    =========================== */
 
 .project-main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 4rem;
+    margin: 0;
+    padding: 0 40px;
 }
 
 /* ===========================
@@ -104,11 +103,15 @@
     grid-template-columns: repeat(3, 1fr);
 }
 
+.project-images-grid.single-col {
+    grid-template-columns: 1fr;
+}
+
 .project-image-card {
     background-color: var(--bg-secondary);
-    border: 1px solid var(--border-color);
     overflow: hidden;
     transition: transform 0.3s ease;
+    border-radius: 8px;
 }
 
 .project-image-card:hover {
@@ -225,10 +228,6 @@
    =========================== */
 
 @media (max-width: 1024px) {
-    .project-main {
-        padding: 0 2rem;
-    }
-
     .project-main-title {
         font-size: 3rem;
     }
@@ -240,7 +239,7 @@
 
 @media (max-width: 768px) {
     .project-main {
-        padding: 0 1.5rem;
+        padding: 0 40px;
     }
 
     .project-main-title {
